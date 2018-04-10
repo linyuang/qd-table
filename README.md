@@ -1,7 +1,9 @@
 # qd-table
-#### 这是一个开发中的table插件<br>
+### 这是一个开发中的table插件（主兼容webkit内核）<br>
 #### [具体api文档在apiDoc目录下](https://github.com/linyuang/qd-table/tree/master/apiDoc)<br>
- 
+### 当前插件功能：<br>
+#### 生成表格、ctrl/shift+行选择、添加行、删除行、批量修改、限制行修改、限制行显示、自定义头部、拖拽行宽度等功能<br>
+
 ### 运行展示：<br>
 #### * 一般配置展示：<br>
 ![](https://github.com/linyuang/qd-table/blob/master/icon/table_show.png)<br>
