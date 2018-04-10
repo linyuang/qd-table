@@ -1,6 +1,6 @@
 # qd-table
 #### 这是一个开发中的table插件<br>
-#### 具体api文档在apiDoc目录下<br>
+#### 具体api文档在apiDoc目录下[](https://github.com/linyuang/qd-table/tree/master/apiDoc)<br>
  
 ### 运行展示：<br>
 #### * 一般配置展示：<br>
