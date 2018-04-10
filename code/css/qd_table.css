@@ -1,0 +1,950 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 微软雅黑;
+}
+p,input,textarea,mark{
+    padding: 0;
+    margin: 0;
+    font-family: 微软雅黑;
+    background-color: transparent;
+}
+._qd_tableDivSize {
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+/*._qd_tableDivSize button{
+    border-radius: 2px;
+    color: #ffffff;
+    outline: none;
+    border: transparent;
+}
+._qd_tableDivSize button:hover{
+    box-shadow:0 0 20px 2px #cccccc inset;
+    cursor: pointer;
+}
+._qd_tableDivSize button:active{
+    box-shadow:0 5px 30px 5px #9d9d9d inset;
+}*/
+._qd_funBtnDivSize{
+    width: auto;
+    height: auto;
+    border: 1px solid transparent;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+._qd_funBtnDiv {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+._qd_funBtnSize{
+    width: 70px;
+    height: 40px;
+    border-radius: 2px;
+    margin: 10px 0 10px 10px;
+    color: #ffffff;
+    outline: #82a4db;
+    border: transparent;
+}
+
+._qd_funBtnSize:hover{
+    box-shadow:0 0 20px 2px #cccccc inset;
+    cursor: pointer;
+}
+
+._qd_funBtnSize:active{
+    box-shadow:0 5px 30px 5px #9d9d9d inset;
+}
+
+/*表格样式*/
+._qd_tableTitleDiv {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+._qd_tableTitleDiv tr{
+    background-color: #d0d0d0;
+}
+._qd_tableContentDiv {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+._qd_tableContentDiv table{
+    border-top: transparent;
+}
+._qd_tableContentDiv button{
+    border-radius: 2px;
+    color: #ffffff;
+    outline: none;
+    border: transparent;
+}
+._qd_tableContentDiv button:hover{
+    box-shadow:0 0 20px 2px #cccccc inset;
+    cursor: pointer;
+}
+._qd_tableContentDiv button:active{
+    box-shadow:0 5px 30px 5px #9d9d9d inset;
+}
+._qd_tableSize{
+    width: 100%;
+    height: auto;
+    /*用来显示表格单元格、行、列的算法规则，url：http://www.w3school.com.cn/jsref/prop_style_tablelayout.asp*/
+    table-layout: auto;
+    border-collapse: collapse;
+}
+._qd_trSize{
+    width: auto;
+    height: 30px;
+}
+._qd_trSize:nth-child(even){
+    background-color: #ededed;
+}
+._qd_headColumn {
+    min-height: 30px;
+    width: 50px;
+    height: auto;
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+}
+._qd_thSize,._qd_tdSize {
+    min-height: 30px;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+._qd_tdSize{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+._qd_pSize{
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    word-break: break-all;
+}
+._qd_divSize{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    /*定义弹性布局*/
+    display: flex;
+    /*display: -webkit-box;*/
+    display: -webkit-flex;
+
+    /*定义弹性显示方向*/
+    flex-direction: row;
+    /*-webkit-box-direction: normal;*/
+    /*-webkit-box-orient: horizontal;*/
+    -webkit-flex-direction: row;
+}
+._qd_textAreaSize{
+    width: auto;
+    height: 100%;
+    background-color: #ffffff;
+    border: transparent;
+    font-size: 16px;
+    text-align: center;
+    resize: none;
+    outline: none;
+    overflow:visible;
+
+    /*定义弹性布局*/
+    display: flex;
+    display: -webkit-box;
+    /*display: -moz-box;*/
+    /*display: -ms-flexbox;*/
+    display: -webkit-flex;
+
+    /*定义子元素伸缩*/
+    flex: 1;
+    /*-webkit-box-flex: 1.0;*/
+    -webkit-flex: 1;
+}
+._qd_btnSize{
+    width: 30px;
+    height: 100%;
+    outline: none;
+    background-color: #ededed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+._qd_downTriangle {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #000000;
+    /*点击穿透*/
+    pointer-events: none;
+}
+._qd_ulSize {
+    width: 100%;
+    height: 299px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*background-color: #a3f57f;*/
+    border-bottom: 1px solid #9d9d9d;
+    /*position: absolute;
+    left: 0;
+    top: 1rem;*/
+    list-style: none;
+    z-index: 10;
+}
+._qd_liSize{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid #9d9d9d;
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    /*文本超出省略*/
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+._qd_liSize:hover{
+    background-color: #00ddff;
+}
+._qd_checkBoxDiv {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_checkBox{
+    display: block;
+    width: 15px;
+    height: 15px;
+}
+._qd_moreSelectUlDivSize {
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    /*border: 1px solid #dddddd;*/
+    /*position: absolute;
+    top: 1rem;
+    left: 0;*/
+    z-index: 10;
+}
+._qd_moreSelectUlSize {
+    width: 100%;
+    height: 271px;
+    /*background-color: #a3f57f;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+}
+._qd_moreSelectLiSize,._qd_allSelectDivSize {
+    /*min-height: 28px;*/
+    width: 100%;
+    height: 28px;
+    font-size: 0.5rem;
+    color: #000000;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_moreSelectLiSize{
+    border-bottom: 1px solid #9a9a9a;
+}
+._qd_moreSelectLiSize p {
+    width: auto;
+    font-size: 14px;
+    /*word-break: break-all;*/
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex: 1;
+    -webkit-flex: 1;
+}
+._qd_allSelectDivSize{
+    border-top: 1px solid #9a9a9a;
+}
+._qd_allSelectDivSize p{
+    font-size: 14px;
+}
+._qd_moreSelectCBSize{
+    margin: 0 10px;
+}
+._qd_moreSelectAllCBSize{
+    margin: 0 10px;
+}
+._qd_moreSelectBtnDivSize{
+    width: 100%;
+    height: 1rem;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+._qd_moreSelectBtnDivSize button{
+    width: 50%;
+    height: 100%;
+}
+._qd_moreSelectTrueBtnSize{
+    background-color: #00aaff;
+    color: #ffffff;
+}
+._qd_moreSelectFalseBtnSize{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+/*分页信息行样式*/
+._qd_pagingInfoDiv {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_pagingInfoDiv mark{
+    /*点击穿透*/
+    pointer-events: none;
+}
+._qd_pagingInfoDiv button {
+    min-width: 30px;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: transparent;
+    border-radius: 3px;
+    margin: 0 3px;
+    outline: none;
+}
+._qd_pagingInfoDiv button:hover{
+    box-shadow:0 0 20px 2px #cccccc inset;
+    cursor: pointer;
+}
+._qd_pagingInfoDiv button:active{
+    box-shadow:0 5px 30px 5px #888888 inset;
+}
+._qd_pagingInfoLeftArea,._qd_pagingInfoRightArea,._qd_pagingInfoMidArea {
+    width: auto;
+    height: 100%;
+}
+._qd_pagingInfoLeftArea{
+    margin-left: 20px;
+
+    display: flex;
+    display: -webkit-flex;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_pagingInfoRightArea{
+    margin-right: 20px;
+
+    display: flex;
+    display: -webkit-flex;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_pagingInfoMidArea{
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_pagingInfoTip{
+    font-size: 14px;
+}
+._qd_pagingInfoTip mark{
+    font-size: 18px;
+    margin: 0 5px;
+    color: #00aaff;
+}
+._qd_pagingInfoMidArea mark{
+    margin: 0 8px;
+    background-color: transparent;
+}
+._qd_pagingInfoUpPageDiv,._qd_pagingInfoPageIndexDiv,._qd_pagingInfoDownPageDiv{
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_pagingInfoJumpInput{
+    width: 40px;
+    height: 26px;
+    font-size: 16px;
+    outline: none;
+}
+._qd_pagingInfoSelectBtn{
+    background-color: #00aaff !important;
+}
+._qd_pagingInfoSelectBtn mark{
+    color: #ffffff !important;
+}
+
+/*批量修改样式*/
+._qd_batchEditBgDiv {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9;
+}
+._qd_batchEditDiv {
+    width: 98%;
+    height: 250px;
+    background-color: #ffffff;
+    border: 1px solid #888888;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+._qd_batchEditTitle{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_batchEditTitleTip{
+    font-size: 20px;
+    margin-left: 20px;
+}
+._qd_batchEditTitleCloseDiv{
+    width: 50px;
+    height: 50px;
+    color: #000000;
+    cursor: pointer;
+}
+._qd_batchEditTitleCloseDiv:hover{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+._qd_batchEditTitleClose {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+._qd_batchEditContent{
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+._qd_batchEditContentArea {
+    width: 98%;
+    height: 100%;
+    background-color: #dddddd;
+    border: 1px solid #888888;
+    overflow-x: auto;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+._qd_batchEditContentArea tr{
+    min-height: 50px;
+}
+._qd_batchEditFooter{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_batchEditBtn{
+    width: 70px;
+    height: 35px;
+    border: transparent;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+._qd_batchEditBtn:hover{
+    box-shadow:0 0 20px 2px #cccccc inset;
+    cursor: pointer;
+}
+._qd_batchEditBtn:active{
+    box-shadow:0 5px 30px 5px #888888 inset;
+}
+._qd_batchEditBtn:first-child{
+    background-color: #00aaff;
+    color: #ffffff;
+}
+._qd_batchEditBtn:last-child{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+._qd_batchEditTable{
+    background-color: #ffffff;
+}
+._qd_batchEditTable tr{
+    height: 30px;
+}
+._qd_batchEditTable td {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*自定义表头*/
+._qd_newTableTitle{
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    border-collapse: collapse;
+}
+._qd_newTableTitle tr{
+    width: 100%;
+    height: 30px;
+}
+._qd_newTableTitle td {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/*冻结列表样式*/
+._qd_freColDiv[name="freezeTitle"] {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+._qd_freColDiv[name="freezeTitle"] tr{
+    background-color: #d0d0d0;
+}
+._qd_freColDiv[name="freezeContent"] {
+    width: auto;
+    height: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+._qd_freColDiv,.freezeColPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.freezeColTable{
+    border-collapse: collapse;
+    border-left: transparent;
+}
+.freezeColTable:first-child{
+    border-left: 1px solid;
+}
+.freezeColPart{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+/*表格input样式*/
+._qd_tdInput{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    text-indent: 5px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+/*表格编辑框样式*/
+._qd_editBoxBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+._qd_editBoxDiv {
+    width: 500px;
+    height: 350px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    overflow: hidden;
+    position: absolute;
+    margin:auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+._qd_editBoxUpPart {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /*用于inline-block不换行*/
+    white-space: nowrap;
+}
+._qd_editBoxDownPart{
+    width: 100%;
+    height: 49px;
+    border-top: 1px solid #aaaaaa;
+    text-align: center;
+}
+._qd_editPart{
+    display: inline-block;
+    width: 349px;
+    height: 100%;
+    vertical-align: middle;
+    border-right: 1px solid #aaaaaa;
+}
+._qd_editBoxTextArea{
+    width: 90%;
+    height: 90%;
+    font-size: 14px;
+    position: relative;
+    top: 5%;
+    left: 5%;
+}
+._qd_editListPart{
+    display: inline-block;
+    width: 150px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    vertical-align: middle;
+    border-width: 0;
+}
+._qd_editBoxBtn{
+    width: 70px;
+    height: 40px;
+    border-radius: 2px;
+    color: #ffffff;
+    outline: #82a4db;
+    border: transparent;
+}
+
+._qd_editBoxBtn:first-child{
+    margin-right: 20px;
+}
+
+._qd_editBoxBtn:hover{
+    box-shadow:0 0 20px 2px #cccccc inset;
+    cursor: pointer;
+}
+
+._qd_editBoxBtn:active{
+    box-shadow:0 5px 30px 5px #9d9d9d inset;
+}
+/*列宽度拖拽线样式*/
+._qd_vLineDiv {
+    width: 10px;
+    height: 0;
+    cursor:col-resize;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    z-index: 11;
+}
+._qd_vLine{
+    width: 0;
+    height: 100%;
+    border: 1px solid orange;
+    margin-left: 4px;
+}
+
+/*tableTitle排序样式*/
+._qd_tableTitleTriangleDiv {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    position: relative;
+    top: -7px;
+    left: 5px;
+}
+._qd_tableTitleTriangle{
+    /*点击穿透*/
+    pointer-events: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+._qd_tableTitleTriangleUp{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid #444444;
+}
+._qd_tableTitleTriangleDown{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 14px solid #444444;
+}
+._qd_selUpTriangle{
+    border-bottom-color: #00aaff;
+}
+._qd_selDownTriangle{
+    border-top-color: #00aaff;
+}
+/*公共文本提示浮框样式*/
+._qd_contentTextTip {
+    width: auto;
+    height: auto;
+    padding: 3px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #FFCC00;
+    border-radius: 3px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    -webkit-box-shadow: 5px 5px 10px #000000;
+    -moz-box-shadow: 5px 5px 10px #000000;
+    box-shadow: 5px 5px 10px #000000;
+}
+
+
+/*公共样式*/
+._global_displayNone{
+    display: none !important;
+}
+._global_bgColorBlue{
+    background-color: #00aaff !important;
+}
+/*00CCFF*/
+._global_trSelectBgColor{
+    background-color: #00aaff !important;
+    color: #ffffff;
+}
+._global_clickThrough{
+    pointer-events: none;
+}
+/*滚动条*/
+/*::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color:#666666;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:#444444;
+}*/
+
+/*::-webkit-scrollbar-thumb:active {*/
+    /*background-color:#444444;*/
+/*}*/
+
+/*loading动画*/
+._qd_tableLoadingDiv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+
+    display: flex;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    align-items: center;
+    -webkit-align-items: center;
+}
+._qd_LoadingTip{
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+}
+._qd_tableLoading {
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    background-color: transparent;
+}
+._qd_tableLoading > div{
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    background-color: #ffffff;
+
+    display: inline-block;
+    border-radius: 15px;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+._qd_tableLoading ._qd_LoadingRound1 {
+    -webkit-animation-delay: -0.28s;
+    animation-delay: -0.28s;
+}
+
+._qd_tableLoading ._qd_LoadingRound2 {
+    -webkit-animation-delay: -0.14s;
+    animation-delay: -0.14s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.2);
+        -webkit-transform: scale(0.2)
+    }
+
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.2);
+        -webkit-transform: scale(0.2);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
